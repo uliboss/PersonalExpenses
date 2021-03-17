@@ -16,7 +16,7 @@ import java.util.Date;
 @ToString
 @NoArgsConstructor
 @Entity
-public class Expenses {
+public class Expense {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,9 +25,8 @@ public class Expenses {
     private double amount;
     private String currency;
     private String product;
-    private double total;
 
-    public Expenses(Date date, double amount, String currency, String product) {
+    public Expense(Date date, double amount, String currency, String product) {
         this.date = date;
         this.amount = amount;
         this.currency = currency;
