@@ -1,17 +1,14 @@
 package com.info.personalexpensesapp.dto;
 
 import lombok.*;
-import java.time.LocalDate;
 
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class ExpenseDto {
+public class TotalDto {
 
-    private LocalDate date;
-    private double amount;
+    private Double total;
     private String currency;
-    private String product;
 }
