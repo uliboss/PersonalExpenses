@@ -1,5 +1,7 @@
 package com.info.personalexpensesapp.util;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,5 +23,13 @@ public class CurrencyUtils {
 
     public static boolean containsCurrencyCode(String currency){
         return SYMBOLS.contains(currency);
+    }
+
+    public static DecimalFormat customCurrencyDecimalDotFormat(){
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        decimalFormatSymbols.setDecimalSeparator('.');
+        DecimalFormat decimalFormat = new DecimalFormat("##.##");
+        decimalFormat.setDecimalFormatSymbols(decimalFormatSymbols);
+        return decimalFormat;
     }
 }
