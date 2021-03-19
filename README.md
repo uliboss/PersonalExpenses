@@ -8,17 +8,17 @@ Personal expenses web application based on Spring Boot, Spring data JPA, Maven a
 1. [Features](#features)
 2. [Requirements](#requirements)
 3. [How to run the application](#how-to-run-the-application)
-4. [POST query example](#post-query-example)
+4. [POST request example](#post-request-example)
 
 
 ## Features
 
 * Based on Spring boot, Spring data JPA, Maven and H2 in-memory database
 * Has following API:
-  * PATH (/expenses) `POST` http (query -> request) — adds expense entry to the list. Endpoint accepts JSON with the following data: `date, amount, currency, product` 
-  * PATH (/expenses) `GET` http (query -> request) — shows the list of all expenses `grouped and sorted by date`
-  * PATH (/expenses?date=YYYY-MM-DD) `DELETE` http (query -> request) — removes all expenses for specified date, where: `date` - is the date for which all expenses should be removed
-  * PATH (/expenses/total?base=UAH) `GET` http (query -> request) — shows the list of total amount of spent money converted and calculated to specified currency by online converter and presents it in specified currency, where `base` - is the currency in which total amount of expenses should be presented
+  * PATH (/expenses) `POST` http request — adds expense entry to the list. Endpoint accepts JSON with the following data: `date, amount, currency, product` 
+  * PATH (/expenses) `GET` http request — shows the list of all expenses `grouped and sorted by date`
+  * PATH (/expenses?date=YYYY-MM-DD) `DELETE` http request — removes all expenses for specified date, where: `date` - is the date for which all expenses should be removed
+  * PATH (/expenses/total?base=UAH) `GET` http request — shows the list of total amount of spent money converted and calculated to specified currency by online converter and presents it in specified currency, where `base` - is the currency in which total amount of expenses should be presented
   * Input validation of `currency` and `amount` fields
   * Spring MVC with Service layer and DTO pattern
   * Unit tests
@@ -41,10 +41,10 @@ Alternatively, you can use the [Spring Boot Maven plugin](https://docs.spring.io
 mvn spring-boot:run
 ```
 
-For HTTP queries you can use [Postman](https://www.postman.com/downloads/).
+For HTTP requests you can use [Postman](https://www.postman.com/downloads/).
 
 
-## POST query example:
+## POST request example:
 ```
 {
 "date": "2020-11-02",
