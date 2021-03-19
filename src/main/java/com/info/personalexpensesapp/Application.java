@@ -24,16 +24,16 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        Expense expense = new Expense(LocalDate.of(2018,2,5), 5.5, "EUR", "Milk");
-        expenseRepository.save(expense);
-        log.info("New purchase is done: " + expense);
+        Expense testExpense = new Expense(LocalDate.of(2018,2,5), 3, "EUR", "Milk");
+        expenseRepository.save(testExpense);
+        log.info("New purchase is done: " + testExpense);
 
-        Expense expense2 = new Expense(LocalDate.of(2016,5,2), 5, "EUR", "Cheese");
-        expenseRepository.save(expense2);
-        log.info("New purchase is done: " + expense2);
+        Expense testExpense2 = new Expense(LocalDate.of(2016,5,2), 5, "EUR", "Cheese");
+        expenseRepository.save(testExpense2);
+        log.info("New purchase is done: " + testExpense2);
 
-        Expense expense3 = new Expense(LocalDate.of(2016,5,2), 400, "EUR", "Bread");
-        expenseRepository.save(expense3);
-        log.info("New purchase is done: " + expense3);
+        Expense testExpense3 = new Expense(LocalDate.of(2016,5,2), 1, "EUR", "Bread");
+        expenseRepository.save(testExpense3);
+        log.info("New purchase is done: " + testExpense3);
     }
 }
