@@ -1,6 +1,6 @@
-# Personal Expenses Web Application
+# Personal Expenses REST Application
 
-Personal expenses web application based on Spring Boot, Spring data JPA, Maven and H2 in-memory database.
+Personal expenses REST application based on Spring Boot, Spring data JPA, Maven and H2 in-memory database.
 
 
 ## Contents
@@ -15,13 +15,13 @@ Personal expenses web application based on Spring Boot, Spring data JPA, Maven a
 
 * Based on Spring boot, Spring data JPA, Maven and H2 in-memory database
 * Has following API:
-  * PATH (/expenses) `POST` http request — adds expense entry to the list. Endpoint accepts JSON with the following data: `date, amount, currency, product` 
-  * PATH (/expenses) `GET` http request — shows the list of all expenses `grouped and sorted by date`
+  * PATH (/expenses) `POST` http request — adds expense entry in the database. Endpoint accepts JSON with the following fields: `date, amount, currency, product` 
+  * PATH (/expenses) `GET` http request — returns the list of all expenses `grouped and sorted by date`
   * PATH (/expenses?date=YYYY-MM-DD) `DELETE` http request — removes all expenses for specified date, where: `date` - is the date for which all expenses should be removed
-  * PATH (/expenses/total?base=UAH) `GET` http request — shows the list of total amount of spent money converted and calculated to specified currency by online converter and presents it in specified currency, where `base` - is the currency in which total amount of expenses should be presented
-  * Input validation of `currency` and `amount` fields
+  * PATH (/expenses/total?base=UAH) `GET` http request — returns total amount of spent money converted and calculated to specified currency by online converter and presents it in specified currency, where `base` - is the currency in which total amount of expenses should be presented
   * Spring MVC with Service layer and DTO pattern
   * Unit tests
+* Input validation of `currency` and `amount` fields
 
 
 ## Requirements
