@@ -18,6 +18,7 @@ class CurrencyUtilsTest {
         String currencyCode = "UA";
         boolean result = CurrencyUtils.containsCurrencyCode(currencyCode);
         assertFalse(result);
+        System.out.println(test);
     }
 
     @Test
