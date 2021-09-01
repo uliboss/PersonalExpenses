@@ -20,6 +20,7 @@ class CurrencyUtilsTest {
         assertFalse(result);
         System.out.println("test");
         System.out.println("test");
+        System.out.println("test");
     }
 
     @Test
