@@ -19,6 +19,7 @@ class CurrencyUtilsTest {
         boolean result = CurrencyUtils.containsCurrencyCode(currencyCode);
         assertFalse(result);
         System.out.println("test");
+        System.out.println("test");
     }
 
     @Test
